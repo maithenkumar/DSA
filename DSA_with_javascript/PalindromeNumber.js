@@ -1,0 +1,5 @@
+function PalindromeNumber(num) {
+    
+
+    
+}
