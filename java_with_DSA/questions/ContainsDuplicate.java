@@ -1,14 +1,17 @@
 package questions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * ContainsDuplicate
  */
 public class ContainsDuplicate {
 
     public static void main(String[] args) {
-        int [] nums={1,2,3,};
+        int [] nums={1,1};
         
-    System.out.println( containsDuplicate(nums));
+    System.out.println( containsDuplicate2(nums));
     }
  public static  boolean containsDuplicate(int [] nums){
     boolean ans=false;
@@ -24,4 +27,19 @@ public class ContainsDuplicate {
     return ans;
 
 }
+ public static  boolean containsDuplicate2(int [] nums){
+    Map<Integer,Integer> temp=new HashMap<>();
+    for(int i=0;i<nums.length;i++){
+        if(temp.containsKey(nums[i])){
+            return true;
+        }
+        else{
+            temp.put(nums[i],i);
+        }
+    }
+
+    return false;
+
+ }
+
 }

@@ -8,7 +8,7 @@ public class BestTimetoBuyandSellStock {
 
     public static int maxProfit(int[] prices) {
         int ans = 0;
-        for (int i = 0; i < prices.length ; i++) {
+        for (int i = 0; i < prices.length; i++) {
             int max = Integer.MIN_VALUE;
             int profet = 0;
             for (int j = i + 1; j < prices.length; j++) {
@@ -21,66 +21,86 @@ public class BestTimetoBuyandSellStock {
             }
             System.out.println(max);
             // if (max > prices[i]) {
-            //     profet = max - prices[i];
+            // profet = max - prices[i];
             // }
             // if (ans < profet) {
 
-            //     ans = profet;
-            //     profet=0;
+            // ans = profet;
+            // profet=0;
             // }
 
         }
         return ans;
 
-
     }
-    public static int maxProduct4(int [] prices){
-        int least=Integer.MAX_VALUE;
-        int profit=0;
-        int maxprofit=0;
+
+    public static int maxProduct4(int[] prices) {
+        int least = Integer.MAX_VALUE;
+        int profit = 0;
+        int maxprofit = 0;
         for (int i = 0; i < prices.length; i++) {
-            if (prices[i]<least) {
-                least=prices[i];
-                
+            if (prices[i] < least) {
+                least = prices[i];
+
             }
-            profit=prices[i]-least;
-            if (maxprofit<profit) {
-                maxprofit=profit;
-                
+            profit = prices[i] - least;
+            if (maxprofit < profit) {
+                maxprofit = profit;
+
             }
         }
         return maxprofit;
     }
-    public static  int maxProfit3(int []prices){
-        int min=Integer.MAX_VALUE;
-        int op=0;
+
+    public static int maxProfit3(int[] prices) {
+        int min = Integer.MAX_VALUE;
+        int op = 0;
         int pist = 0;
 
         for (int i = 0; i < prices.length; i++) {
-            if(prices[i]<min)min=prices[i] ;
-            pist=prices[i]-min;
-            if(op<pist){
-                op=pist;
+            if (prices[i] < min)
+                min = prices[i];
+            pist = prices[i] - min;
+            if (op < pist) {
+                op = pist;
             }
-            
+
         }
         return op;
     }
-     public int maxProfit2(int[] prices) {
+
+    public int maxProfit2(int[] prices) {
         int lsf = Integer.MAX_VALUE;
         int op = 0;
         int pist = 0;
-        
-        for(int i = 0; i < prices.length; i++){
-            if(prices[i] < lsf){
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < lsf) {
                 lsf = prices[i];
             }
             pist = prices[i] - lsf;
-            if(op < pist){
+            if (op < pist) {
                 op = pist;
             }
         }
         return op;
     }
 
+    static int maxProduct5(int[] prices) {
+        int min = Integer.MAX_VALUE;
+        int prifit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < min) {
+                min = prices[i];
+
+            }
+            int prof= prices[i]-min;
+            if (prifit<prof) {
+                prifit=prof;
+                
+            }
+
+        }
+return prifit;
+    }
 }
