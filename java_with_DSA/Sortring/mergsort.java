@@ -8,7 +8,7 @@ public class mergsort {
     public static void main(String[] args) {
         int[] arr = { 2, 2, 5, 52, 3, 5, 7, 8, 75, 4, 45 };
 
-        System.out.println(Arrays.toString(MergSort(arr, 0, arr.length - 1)));
+        System.out.println((MergSort(arr, 0, arr.length - 1)));
     }
 
     static int[]   MergSort(int[] arr, int low, int high) {

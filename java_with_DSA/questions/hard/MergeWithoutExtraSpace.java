@@ -1,4 +1,4 @@
-package questions.heard;
+package questions.hard;
 
 import java.util.Arrays;
 

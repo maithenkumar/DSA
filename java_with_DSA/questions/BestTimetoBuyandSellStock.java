@@ -2,8 +2,30 @@ package questions;
 
 public class BestTimetoBuyandSellStock {
     public static void main(String[] args) {
-        int[] arr = { 7, 1, 5, 3, 6, 4 };
-        System.out.println(maxProduct4(arr));
+        int[] arr = { 7, 2, 1, 3, 5, 4 };
+        System.out.println(maxProfit0(arr));
+    }
+
+    public static int maxProfit0(int[] prices) {
+        int n = prices.length;
+        int max = Integer.MIN_VALUE;
+        int left = 0;
+        int right = n - 1;
+        while (left < right) {
+            if (prices[left] < prices[right]) {
+                int temp = prices[right] - prices[left];
+                if (max < temp) {
+                    max = temp;
+
+                }
+                right--;
+
+            }else{
+                left++;
+            }
+
+        }
+return max;
     }
 
     public static int maxProfit(int[] prices) {
@@ -94,13 +116,13 @@ public class BestTimetoBuyandSellStock {
                 min = prices[i];
 
             }
-            int prof= prices[i]-min;
-            if (prifit<prof) {
-                prifit=prof;
-                
+            int prof = prices[i] - min;
+            if (prifit < prof) {
+                prifit = prof;
+
             }
 
         }
-return prifit;
+        return prifit;
     }
 }

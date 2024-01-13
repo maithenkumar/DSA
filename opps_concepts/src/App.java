@@ -3,3 +3,17 @@ public class App {
         System.out.println("Hello, World!");
     }
 }
+/**
+ * InnerApp
+ */
+ class InnerApp {
+
+    
+}
+/**
+ * InnerApp_1
+ *  
+ class InnerApp_1 {
+
+    
+}*/
